@@ -38,9 +38,9 @@
                     "interactions": "Press"
                 },
                 {
-                    "name": "New action",
+                    "name": "ScaleXYZ",
                     "type": "Value",
-                    "id": "0614df41-6090-4183-bd46-97bc1437f7c2",
+                    "id": "099ff181-ca81-456f-9504-03d9d42eaed4",
                     "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "Press"
@@ -192,12 +192,12 @@
                 },
                 {
                     "name": "",
-                    "id": "bbd67283-d3e2-4c03-bda9-5e2dd7b29bbe",
-                    "path": "",
+                    "id": "03b6e80c-ab81-42e0-91dc-2bb5e4ca98bc",
+                    "path": "<MidiDevice>/control001",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "ScaleXYZ",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

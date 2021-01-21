@@ -14,7 +14,8 @@ public class PlayerController : MonoBehaviour
     public PlayerMovementBehaviour playerMovementBehaviour;
     public PlayerAnimationBehaviour playerAnimationBehaviour;
     public PlayerVisualsBehaviour playerVisualsBehaviour;
-
+    //public PlayerScaleXYZBehavior playerScaleXYZBehavior; // switch to US English, deal with it. the refactor is coming
+    //public float _maxScale = 2.0f;
 
     [Header("Input Settings")]
     public PlayerInput playerInput;
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour
         playerMovementBehaviour.SetupBehaviour();
         playerAnimationBehaviour.SetupBehaviour();
         playerVisualsBehaviour.SetupBehaviour(playerID, playerInput);
+        //playerScaleXYZBehavior.SetupBehaviour(); // mixed us/uk english
     }
 
 
@@ -79,8 +81,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
-
+    // // Called from Axis Knob
+    // public void onScaleXYZ(InputAction.CallbackContext ctx)
+    // {
+    //      playerScaleXYZBehavior.setScaleXYZ( ctx.ReadValue<float>() * 2 );        
+    // }
 
 
     //INPUT SYSTEM AUTOMATIC CALLBACKS --------------
@@ -132,6 +137,7 @@ public class PlayerController : MonoBehaviour
         CalculateMovementInputSmoothing();
         UpdatePlayerMovement();
         UpdatePlayerAnimationMovement();
+        //playerScaleXYZBehavior.UpdateScaleXYZ();
     }
 
     //Input's Axes values are raw
@@ -153,6 +159,50 @@ public class PlayerController : MonoBehaviour
     {
         playerAnimationBehaviour.UpdateMovementAnimation(smoothInputMovement.magnitude);
     }
+
+    // void UpdateScaleXYZ()
+    // {
+    //     Vector3 vLocalScale =  gameObject.localScale;
+        
+    //     if (
+    //             (vLocalScale.x >= vLocalScale.y ) &&
+    //             (vLocalScale.x >= vLocalScale.z) )
+    //             {
+    //                 float ratioXY = vLocalScale.x / vLocalScale.y;
+    //                 float ratioXZ = vLocalScale.x / vLocalScale.z;
+    //                 vLocalScale.x = _maxScale;
+    //                 vLocalScale.y = _maxScale / ratioXY;
+    //                 vLocalScale.z = _maxScale / ratioXZ;
+    //                 //Debug.Log($" {vLocalScale.x} X is biggest");
+    //             }
+
+    //     else if (
+    //             (vLocalScale.y >= vLocalScale.x ) &&
+    //             (vLocalScale.y >= vLocalScale.z) )
+    //             {
+    //                 float ratioYX = vLocalScale.y / vLocalScale.x;
+    //                 float ratioYZ = vLocalScale.y / vLocalScale.z;
+    //                 vLocalScale.y = _maxScale;
+    //                 vLocalScale.x = _maxScale / ratioYX;
+    //                 vLocalScale.z = _maxScale / ratioYZ;
+    //                 //Debug.Log($" {vLocalScale.y} Y is biggest");
+    //             }
+        
+    //     else if (
+    //             (vLocalScale.z >= vLocalScale.x ) &&
+    //             (vLocalScale.z >= vLocalScale.y) )
+    //             {
+    //                 float ratioZX = vLocalScale.z / vLocalScale.x;
+    //                 float ratioZY = vLocalScale.z / vLocalScale.y;
+    //                 vLocalScale.z = _maxScale;
+    //                 vLocalScale.x = _maxScale * ratioZX;
+    //                 vLocalScale.y = _maxScale * ratioZY;
+    //                 //Debug.Log($" {vLocalScale.z} Z is biggest");
+    //             }
+                
+    //     //Debug.Log($"vLocalScale[{vLocalScale}] and _maxScale[{_maxScale}] after transform");
+    //     gameObject.localScale = vLocalScale;    
+    // }
 
 
     public void SetInputActiveState(bool gameIsPaused)
