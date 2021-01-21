@@ -135,6 +135,85 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 280609174585779900}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &16277603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16277595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8214e1f80fdb244d97d656b0a10763a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxScale: 2
+  _minScale: 0.01
+  _transform: {fileID: 16277600}
+  _ScaleXYZ:
+    m_Name: Scale XYZ
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 58c6b8c5-a3ac-452e-bff1-2d36bebe4390
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 35f0314a-4954-4f50-9be7-cc10350704a8
+      m_Path: <MidiDevice>/control001
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Scale XYZ
+      m_Flags: 0
+  _ScaleX:
+    m_Name: Scale X
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 1604abab-fa3a-4414-b0f5-1704a07f08a9
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 68f8b29b-2812-4d3a-9b3e-9757399b8403
+      m_Path: <MidiDevice>/control002
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Scale X
+      m_Flags: 0
+  _ScaleY:
+    m_Name: Scale Y
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 06c9300c-016e-430c-8b11-00bf94a4d615
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 30676f63-4273-4f1f-b7ff-d4a026b1ca53
+      m_Path: <MidiDevice>/control003
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Scale Y
+      m_Flags: 0
+  _ScaleZ:
+    m_Name: Scale Z
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 061fac44-c7c6-478a-958b-4d076066ccb9
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 0e272771-f6d4-4210-ae94-b1864110a23c
+      m_Path: <MidiDevice>/control004
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Scale Z
+      m_Flags: 0
 --- !u!1 &31590763
 GameObject:
   m_ObjectHideFlags: 3
@@ -4085,8 +4164,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1833978498}
-  m_LocalRotation: {x: 0.18110338, y: -0.0021460855, z: 0.00039519923, w: 0.9834617}
-  m_LocalPosition: {x: 0.0009764973, y: -0.65368915, z: -0.22374439}
+  m_LocalRotation: {x: 0.18110336, y: -0.002146129, z: 0.00039520717, w: 0.9834617}
+  m_LocalPosition: {x: 0.00097649544, y: -0.65368915, z: -0.22374439}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 193751149}
