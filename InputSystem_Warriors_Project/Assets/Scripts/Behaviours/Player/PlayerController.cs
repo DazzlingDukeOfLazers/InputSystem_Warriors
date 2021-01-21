@@ -48,6 +48,12 @@ public class PlayerController : MonoBehaviour
     //This is called from PlayerInput; when a joystick or arrow keys has been pushed.
     //It stores the input Vector as a Vector3 to then be used by the smoothing function.
 
+    public void OnSquoze(InputAction.CallbackContext value)
+    {
+        Vector2 inputMovement = value.ReadValue<Vector2>();
+        rawInputMovement = new Vector3(inputMovement.x, 0, inputMovement.y);
+    }
+
 
     public void OnMovement(InputAction.CallbackContext value)
     {
